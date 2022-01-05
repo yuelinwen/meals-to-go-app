@@ -1,36 +1,20 @@
-import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
-import { StatusBar, StyleSheet, SafeAreaView, Text, View, Platform } from 'react-native';
-import { Searchbar } from 'react-native-paper';
-import React from 'react';
+// npm install react-native-paper 
+// npm install --save styled-components
 
-const isAndroid = Platform.OS === 'android';
+
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import { ThemeProvider } from "styled-components/native";
+
+import { theme } from "./src/infrastructure/theme";
+import { RestaurantsScreen } from "./src/features/restaurants/screens/restaurants-screen";
+
 export default function App() {
   return (
     <>
-      <SafeAreaView style={styles.container}>
-        <View style={styles.search}>
-          <Searchbar />
-        </View>
-        <View style={styles.list}>
-          <Text>list</Text>
-        </View>
-      </SafeAreaView>
+      <ThemeProvider theme={theme}>
+        <RestaurantsScreen />
+      </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight,
-  },
-  search: {
-    padding: 16,
-  },
-  list: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: "blue",
-  },
-});
