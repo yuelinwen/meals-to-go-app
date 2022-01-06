@@ -6,6 +6,10 @@
 //expo install @expo-google-fonts/oswald 
 //expo install @expo-google-fonts/lato 
 
+//expo install react-native-svg
+
+
+
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { ThemeProvider } from "styled-components/native";
 
