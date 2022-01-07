@@ -15,6 +15,9 @@
 //分页
 //npm install @react-navigation/stack
 
+//map
+//expo install react-native-maps
+
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React from "react";
 import { ThemeProvider } from "styled-components/native";
