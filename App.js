@@ -21,6 +21,8 @@
 //andriod image web view 插件
 //expo install react-native-webview
 
+//expo local storage
+//expo install @react-native-async-storage/async-storage
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React from "react";
 import { ThemeProvider } from "styled-components/native";
